@@ -11,11 +11,15 @@ extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+@onready var arrow: Sprite2D = $Arrow
+
 
 func _physics_process(_delta: float) -> void:
 	var pendulum_position = pendulum.position
 	
 	adjust_rope_to_pendulum(pendulum_position)
+	
+	setup_arrow()
 	
 	if Input.is_action_just_pressed("ui_right"):
 		var group_name = get_line_group(pendulum_position.x)
@@ -73,3 +77,28 @@ func impulse(group_name: String, initial_force: float = 0) -> void:
 	animation_player.play("RESET")
 	animation_player.play(group_name)
 	pendulum.apply_central_impulse(Vector2(applied_force, 0))
+
+
+func setup_arrow() -> void:
+	var direction = get_movement_direction()
+
+	match direction:
+		"right":
+			arrow.visible = true
+			arrow.flip_h = false
+		"left":
+			arrow.visible = true
+			arrow.flip_h = true
+		_:
+			arrow.visible = false
+
+
+# RigidBody2Dの進行方向を返す関数
+func get_movement_direction() -> String:
+	var velocity = pendulum.linear_velocity
+	if velocity.x > 0:
+		return "right"  # 右方向に進んでいる
+	elif velocity.x < 0:
+		return "left"  # 左方向に進んでいる
+	else:
+		return "none"  # X軸方向には進んでいない
