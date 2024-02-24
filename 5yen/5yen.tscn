@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpcl42gfc5llh"]
+
+[ext_resource type="Texture2D" uid="uid://cyeycywri8v12" path="res://5yen/5yen.svg" id="1_ui6sb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_psl4c"]
+radius = 25.0799
+
+[node name="5Yen" type="RigidBody2D"]
+
+[node name="5Yen" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ui6sb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_psl4c")
