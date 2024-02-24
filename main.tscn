@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnp02qdsdugm4"]
+[gd_scene load_steps=10 format=3 uid="uid://dnp02qdsdugm4"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_hpmkf"]
 [ext_resource type="Texture2D" uid="uid://cgfufjpwrqpgb" path="res://icon.svg" id="3_qw73r"]
@@ -6,11 +6,184 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n87m5"]
 
+[sub_resource type="Animation" id="Animation_k8ty4"]
+resource_name = "YELLOW"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("YellowLeft:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("YellowRight:default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1), Color(1, 1, 0, 1), Color(0.588235, 0.588235, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bkpgl"]
+resource_name = "GREEN"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenLeft:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GreenRight:default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1), Color(0, 1, 0, 1), Color(0, 0.588235, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j6exv"]
+resource_name = "RED"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Red:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.588235, 0, 0, 1), Color(1, 0, 0, 1), Color(0.588235, 0, 0, 1), Color(1, 0, 0, 1), Color(0.588235, 0, 0, 1), Color(1, 0, 0, 1), Color(0.588235, 0, 0, 1), Color(1, 0, 0, 1), Color(0.588235, 0, 0, 1), Color(1, 0, 0, 1), Color(0.588235, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l35fs"]
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenLeft:default_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(0, 0.588235, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GreenRight:default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(0, 0.588235, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("YellowLeft:default_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(0.588235, 0.588235, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("YellowRight:default_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(0.588235, 0.588235, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Red:default_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(0.588235, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46i6w"]
+_data = {
+"GREEN": SubResource("Animation_bkpgl"),
+"RED": SubResource("Animation_j6exv"),
+"RESET": SubResource("Animation_l35fs"),
+"YELLOW": SubResource("Animation_k8ty4")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_hpmkf")
 
+[node name="GreenLeft" type="Line2D" parent="." groups=["GREEN"]]
+position = Vector2(599, 304)
+points = PackedVector2Array(-35, 20, -35, 344)
+width = 6.0
+default_color = Color(0, 0.588235, 0, 1)
+
+[node name="GreenRight" type="Line2D" parent="." groups=["GREEN"]]
+position = Vector2(623, 304)
+points = PackedVector2Array(-35, 20, -35, 344)
+width = 6.0
+default_color = Color(0, 0.588235, 0, 1)
+
+[node name="YellowLeft" type="Line2D" parent="." groups=["YELLOW"]]
+position = Vector2(605, 304)
+points = PackedVector2Array(-35, 20, -35, 344)
+width = 6.0
+default_color = Color(0.588235, 0.588235, 0, 1)
+
+[node name="YellowRight" type="Line2D" parent="." groups=["YELLOW"]]
+position = Vector2(617, 304)
+points = PackedVector2Array(-35, 20, -35, 344)
+width = 6.0
+default_color = Color(0.588235, 0.588235, 0, 1)
+
+[node name="Red" type="Line2D" parent="." groups=["RED"]]
+position = Vector2(611, 304)
+points = PackedVector2Array(-35, 20, -35, 344)
+width = 6.0
+default_color = Color(0.588235, 0, 0, 1)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(576, 50)
+position = Vector2(576, 324)
 
 [node name="Sprite" type="Sprite2D" parent="StaticBody2D"]
 scale = Vector2(0.244141, 0.228516)
@@ -20,17 +193,23 @@ texture = ExtResource("3_qw73r")
 shape = SubResource("CircleShape2D_n87m5")
 
 [node name="5Yen" parent="." instance=ExtResource("4_q53oq")]
-position = Vector2(126, 50)
+position = Vector2(376, 324)
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
-position = Vector2(576, 50)
+position = Vector2(576, 324)
 rotation = 1.5708
 node_a = NodePath("../StaticBody2D")
 node_b = NodePath("../5Yen")
-length = 450.0
+length = 200.0
 
 [node name="Spring" type="Line2D" parent="."]
-position = Vector2(576, 50)
+position = Vector2(597, 359)
 rotation = 1.5708
-points = PackedVector2Array(-3.8147e-06, -1, 0.00163269, 450)
-default_color = Color(0.129412, 0.737255, 0.423529, 0.360784)
+points = PackedVector2Array(-34.9999, 21.0001, -34.9992, 221)
+width = 5.0
+default_color = Color(0.509804, 0.227451, 0.0392157, 0.811765)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_46i6w")
+}
